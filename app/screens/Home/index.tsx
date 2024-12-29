@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Container, Subtitle, Title } from "./screens/Home/styles";
-import { canAllMossarTexts, cantAllMossarTexts } from "./constants/Texts";
 import * as Sharing from 'expo-sharing';
 
 import ConfettiCannon from 'react-native-confetti-cannon';
-import { AllMossarEnum } from "./enums/AllMossar.enum";
 import * as Haptics from 'expo-haptics';
 import ViewShot from "react-native-view-shot";
-import Button from "./components/Button";
+import { AllMossarEnum } from "@/app/enums/AllMossar.enum";
+import { canAllMossarTexts, cantAllMossarTexts } from "@/app/constants/Texts";
+import { Container, Subtitle, Title } from "./styles";
+import Button from "@/app/components/Button";
 
-export default function Index() {
+export default function HomeScreen() {
   const explosionRef = useRef(null);
   const [allMossarStatus] = useState(isAllMossarTime() ? AllMossarEnum.CAN : AllMossarEnum.CANT);
   const [allMossarText, setAllMossarText] = useState(getRandomText(allMossarStatus === AllMossarEnum.CAN ? canAllMossarTexts : cantAllMossarTexts));
@@ -76,7 +76,7 @@ export default function Index() {
         ref={explosionRef}
       />
 
-      <ViewShot ref={viewShotRef} options={{ format: "jpg", quality: 1 }} captureMode="mount">
+      <ViewShot ref={viewShotRef} options={{ format: "jpg", quality: 1 }} captureMode="mount" style={{ flex: 1 }}>
         <Title>
           {allMossarText.title}
         </Title>
