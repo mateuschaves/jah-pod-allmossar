@@ -1,4 +1,5 @@
 import { normalizeFontSize } from '@/app/shared/font';
+import ViewShot from 'react-native-view-shot';
 import styled from 'styled-components/native';
 
 interface ContainerProps {
@@ -19,10 +20,14 @@ export const Title = styled.Text`
   text-align: center;
 `;
 
-
 export const Subtitle = styled.Text`
   color: ${({ theme }) => theme.colors.textHighlight};
   font-size: ${normalizeFontSize(20)}px;
   text-align: center;
   margin-top: 10px;
+`;
+
+export const ViewShotContainer = styled(ViewShot)<ContainerProps>`
+  background-color: ${({ can, theme }) => (can ? theme.colors.backgroundSuccess : theme.colors.backgroundDanger)};
+  padding: 30px;
 `;
