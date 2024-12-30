@@ -31,6 +31,7 @@ export default function App() {
   }, []);
 
   function isAllMossarTime() {
+    return true;
     const date = new Date();
     const hours = date.getHours();
 
@@ -63,8 +64,6 @@ export default function App() {
     viewShotRef?.current?.capture()?.then(uri => {
       Sharing.shareAsync(uri, {
         dialogTitle: 'Compartilhar status do all-mosso',
-        mimeType: 'image/jpeg',
-        UTI: 'public.jpeg',
       });
     });
   }
