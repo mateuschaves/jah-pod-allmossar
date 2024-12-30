@@ -18,7 +18,11 @@ export const canAllMossarTexts = [
     {
         title: "Jah pode! 🍣",
         subtitle: "Só não vale comer com ketchup",
-    }
+    },
+    {
+        title: "Jah pode! 🍦",
+        subtitle: "Vai logo antes que derreta",
+    },
 ]
 
 export const cantAllMossarTexts = [
@@ -37,5 +41,18 @@ export const cantAllMossarTexts = [
     {
         title: "Isso é fome ou gula? 🤔",
         subtitle: "Vai comer uma fruta",
-    }
+    },
+    {
+        title: "Ainda não pode 😕",
+        subtitle: "Espera só mais um pouquinho, campeão!"
+    },
+    {
+        title: "Ainda não pode 😑",
+        subtitle: "Vai beber água",
+    },
+    {
+        title: "Ainda não pode 😑",
+        subtitle: "Só mais 72 horas!",
+    },
+
 ]
